@@ -1,0 +1,12 @@
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class UsCurrencyChecker {
+    private static final String regax = "\\$\\s?\\d+(\\.\\d{1,2})?";
+    private static final Pattern pattern = Pattern.compile(regax);
+    public static Matcher getMatcher(String usCurrencyString) {
+        return pattern.matcher(usCurrencyString);
+    }
+}
